@@ -1,8 +1,5 @@
-import javax.swing.JFrame;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 public class table_demo extends JFrame {
     JTable tbl;
     String[] cols={"name","address"};
@@ -13,12 +10,16 @@ public class table_demo extends JFrame {
     };
     public table_demo(){
         tbl= new JTable(rows,cols);
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new FlowLayout());
-        setSize(300,300);
-        add(tbl);
+        JFrame frame= new JFrame();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new FlowLayout());
+       frame. setSize(300,300);
+        frame.add(tbl);
+        frame.add(new JScrollPane(tbl));
+        frame.setSize(500,500);
     }
+
     public static void main(String[] args) {
         new table_demo();
     }

@@ -57,7 +57,7 @@ o.setText("volume is "+volume);
 }
     
     public static void main(String[] args) {
-       Rectangle p= new Rectangle();
+        new Rectangle();
     }
     
 }

@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 public class form extends JFrame{
     JLabel name;JTextField fname;
     JLabel address; JTextField add;

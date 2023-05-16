@@ -1,24 +1,25 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.nio.channels.ClosedSelectorException;
 public class prime extends JFrame implements ActionListener{
     JLabel num,output;
-    JTextField fnum,display;
-    JButton find;
+    JTextField fnum;
+    JButton calculate;
     prime(){
         num= new JLabel("number");
+        fnum= new JTextField(20);
         output= new JLabel("output");
-       fnum= new JTextField(20);
-       display= new JTextField(20);
-       find = new JButton("find");
+        calculate = new JButton("calculate");
+      
        setSize(400,500);
        setVisible(true);
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
        setLayout (new FlowLayout());
        add(num);add(fnum);
-       add(find);
-       add(output);add(display);
-       find.addActionListener(this);
+       add(calculate);
+       add(output);
+       calculate.addActionListener(this);
 }
 @Override
 public void actionPerformed(ActionEvent e){
@@ -31,10 +32,10 @@ public void actionPerformed(ActionEvent e){
 
         }}
         if(c<=2){
-            display.setText(a+"is a prime number");
+            output.setText(a+"is a prime number");
         }
         else{
-            display.setText(a+"is a composite number");
+            output.setText(a+"is a composite number");
 
         }
        
