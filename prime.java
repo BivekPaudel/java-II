@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.nio.channels.ClosedSelectorException;
 public class prime extends JFrame implements ActionListener{
     JLabel num,output;
     JTextField fnum;
